@@ -5,7 +5,9 @@ from app import app
 with app.app_context():
     fake = Factory.create()
     # Spanish
-    #fake = Factory.create('es_ES')
+    # fake = Factory.create('es_ES')
+    fake = Factory.create('he_IL')
+    # fake = Factory.create('ar_PS')
     # Reload tables
     db.drop_all()
     db.create_all()
