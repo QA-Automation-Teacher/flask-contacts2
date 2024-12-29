@@ -85,7 +85,7 @@ def edit_contact(id):
 
 
 
-@app.get("/contacts")
+@app.get("/api/contacts")
 def contacts():
     '''
     Show alls contacts
@@ -94,15 +94,13 @@ def contacts():
     return jsonify([c.to_dict() for c in contacts])
 
 
-
-
-# @app.route("/contacts")
-# def contacts():
-#     '''
-#     Show alls contacts
-#     '''
-#     contacts = Contacts.query.order_by(Contacts.name).all()
-#     return render_template('web/contacts.html', contacts=contacts)
+@app.route("/contacts")
+def contacts():
+    '''
+    Show alls contacts
+    '''
+    contacts = Contacts.query.order_by(Contacts.name).all()
+    return render_template('web/contacts.html', contacts=contacts)
 
 
 @app.route("/search")

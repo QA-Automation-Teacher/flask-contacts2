@@ -9,6 +9,6 @@ def teardown_module(module):
 
 
 def test_get_contacts(client):
-    response = client.get(BASE_URL + "/contacts")
+    response = client.get(BASE_URL + "/api/contacts")
     assert response.status_code == 200
     assert isinstance(response.get_json(), list)
