@@ -18,4 +18,3 @@ jobs:
           python-version: 'pypy3.10'
       - run: python --version
       - run: pip install -r requirements.txt
-      - run: flask run
